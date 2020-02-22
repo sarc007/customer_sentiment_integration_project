@@ -1,0 +1,3013 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/21/2020 8:51:44 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-H3K5I2D"
+  DTS:CreatorName="DESKTOP-H3K5I2D\suhail"
+  DTS:DTSID="{B31CEA8C-83C5-4141-BE5B-1025EC8F2036}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.68"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{A222147E-CBAE-43F4-8519-4FF98B54A2E9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{758C56E5-E618-451B-9C86-D090B9210EFC}"
+      DTS:ObjectName="CSV File Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::varInFilePathFromInProc]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\in_proc\">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{81711118-3FFE-443A-A081-84C57C2B295F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{22FAE9C7-7953-4EB9-845B-77E8BF4F50AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{746ACDC2-1F52-4218-BD12-EBE30F971801}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{CB7A912E-08E3-4C08-85BF-5F87C452E9A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{7B14BABB-7066-4F67-B75D-2B4AA2BD0139}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{80B1505A-BEDE-4862-955F-81B9CF322C34}"
+      DTS:ObjectName="LocalHost.TestDB.sa">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::varConnectionString]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;User ID=sa;Initial Catalog=TestDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjgQr1T5nt0qOA8BV0xvjagAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAGRb8Rrs/zNUYKNYRRPNcwlZS7u+Ay/FvwQ/mLbT9WswAAAAAOgAAAAAIAACAAAAD342QFRAZnpTEzEMz9GuZu1MNoRWAIsIysZ9KlV3dMniAAAABuha+QlTQNcxuuh+HlehnpTVZLHA7tTdHuyzpdX+C1K0AAAAA+7/srCfhYrvbxJUJwzjer5XeyjkQ4Y7TzJ2KICyJf2BjXLsgPyY0NhXyIk1n26BsztxpMXSgRN4iry50pcDIm</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AEB65CAD-5E42-4E1D-BC79-1383EF4BC5AA}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;C:\\dev\\customer_sentiment_integration_project\\customer_sentiment_integration_project\\arch&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varArchFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\arch</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FF74C5A3-4AC6-4E2E-88F6-81449CF59523}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;Data Source=.;User ID=sa;password=Matrix@2020;Initial Catalog=TestDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varConnectionString">
+      <DTS:VariableValue
+        DTS:DataType="8">Data Source=.;User ID=sa;password=Matrix@2020;Initial Catalog=TestDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F2C7D622-74E4-4906-A6FC-981A22140642}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="0"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varDirectionOfFile">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C285346A-2BE9-4AE3-8898-C78531934000}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;C:\\dev\\customer_sentiment_integration_project\\customer_sentiment_integration_project\\err&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varErrFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\err</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B2651BFE-C5F0-41A3-AB48-C027335E49DA}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;C:\\dev\\customer_sentiment_integration_project\\customer_sentiment_integration_project\\file_source&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFileSourceFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\file_source</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A7986542-F00E-446C-92DF-636191439210}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varInCSVFileName">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{82FB2897-535E-453D-B96C-5B1DFE4095EE}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varArchFolder]+&quot;\\&quot;+ @[User::varInCSVFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varInFilePathArch">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\arch\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A4CC06B1-F853-4CD5-8CD6-6F454E78D858}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varErrFolder]+&quot;\\&quot;+ @[User::varInCSVFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varInFilePathErr">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\err\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4D2CC063-360E-4295-809E-7F4B1CED3B02}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varInProcFolder]+&quot;\\&quot;+ @[User::varInCSVFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varInFilePathFromInProc">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\in_proc\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C7418C51-3158-4058-9D52-6BE47C2466D5}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::varFileSourceFolder]+&quot;\\&quot;+ @[User::varInCSVFileName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varInFilePathFromSource">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\file_source\</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0C34A4ED-DADA-4FDD-8570-5E6BACD788B9}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="&quot;C:\\dev\\customer_sentiment_integration_project\\customer_sentiment_integration_project\\in_proc&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varInProcFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\in_proc</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{01B81E12-7E8E-42A2-814D-4FA12AFA7B2B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSentimentDateTime">
+      <DTS:VariableValue
+        DTS:DataType="7">2/21/2020 10:31:00 AM</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{E02A5E4B-530C-4612-A170-6D87DA906760}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{9905F59F-55A3-4C69-9C21-2A6E2696B64C}"
+        DTS:ObjectName="{9905F59F-55A3-4C69-9C21-2A6E2696B64C}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::varFileSourceFolder]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\dev\customer_sentiment_integration_project\customer_sentiment_integration_project\file_source" />
+            <FEFEProperty
+              FileSpec="*.*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Ingest The CSV File - Flow"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{795F49B7-6733-4984-A026-816520FD6D9F}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Ingest The CSV File - Flow"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Check if record already exists"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[customers_sentiments_tbl]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[customers_sentiments_tbl]) [refTable]
+where [refTable].[sentiment_datetime_fld] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">1</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="sentiment_datetime_fld" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="positive_fld" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="negative_fld" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="neutral_fld" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="flg_fld" dataType="DT_STR" length="1" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Column0_date]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Inputs[Lookup Input].Columns[Column0_date]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="Column0_date"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Column0_date]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">sentiment_datetime_fld</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split"
+                  componentClassID="Microsoft.ConditionalSplit"
+                  contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+                  name="Conditional Split"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Inputs[Conditional Split Input]"
+                      description="Input to the Conditional Split Transformation"
+                      name="Conditional Split Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Inputs[Conditional Split Input].Columns[Column 4]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="Column 4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 4]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Case Insert]"
+                      description="Output 1 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Case Insert"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 4]} == "I"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">[Column 4] == "I"</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">0</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Case Update]"
+                      description="Output 2 of the Conditional Split Transformation"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Case Update"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Inputs[Conditional Split Input]"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                          name="Expression">#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 4]} == "U"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Specifies the friendly version of the expression. This expression version uses column names."
+                          expressionType="Notify"
+                          name="FriendlyExpression">[Column 4] == "U"</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                          name="EvaluationOrder">1</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Conditional Split Default Output]"
+                      description="Default Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      name="Conditional Split Default Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Inputs[Conditional Split Input]">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          name="IsDefaultOut">true</property>
+                      </properties>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Conditional Split Error Output]"
+                      description="Error Output of the Conditional Split Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Conditional Split Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Inputs[Conditional Split Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Inputs[Data Conversion Input].Columns[Column 0]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 0"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Column0_date]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Column0_date]"
+                          name="Column0_date"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[CSV File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[CSV File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]"
+                          name="Column 0"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 1]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 1]"
+                          name="Column 1"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 2]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 2]"
+                          name="Column 2"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 3]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 3]"
+                          name="Column 3"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 4]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                          length="1"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 4]"
+                          name="Column 4"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 0" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 3" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="Column 4" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Get File Name And Date Time"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output].Columns[FileName_column]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output].Columns[FileName_column]"
+                          name="FileName_column"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::varInCSVFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::varInCSVFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output].Columns[CurrentDateTime]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output].Columns[CurrentDateTime]"
+                          name="CurrentDateTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]"
+                          name="Custom_Err_Message_Column"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">"The Flag is not I or U"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">"The Flag is not I or U"</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Get File Name And Date Time 1"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Inputs[Derived Column Input].Columns[ErrorCode]"
+                          cachedDataType="i4"
+                          cachedName="ErrorCode"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Inputs[Derived Column Input].Columns[ErrorColumn]"
+                          cachedDataType="i4"
+                          cachedName="ErrorColumn"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[FileName_column]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[FileName_column]"
+                          name="FileName_column"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::varInCSVFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::varInCSVFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[CurrentDateTime]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[CurrentDateTime]"
+                          name="CurrentDateTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="828"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]"
+                          name="Custom_Err_Message_Column"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">"Error Column : " + (DT_STR,500,1252)#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]} + "Error Code : " + (DT_STR,300,1252)#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">"Error Column : " + (DT_STR,500,1252)ErrorColumn + "Error Code : " + (DT_STR,300,1252)ErrorCode</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Get File Name And Date Time 2"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[FileName_column]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[FileName_column]"
+                          name="FileName_column"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">@[User::varInCSVFileName]</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">@[User::varInCSVFileName]</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[CurrentDateTime]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[CurrentDateTime]"
+                          name="CurrentDateTime"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[GETDATE]()</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">GETDATE()</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="25"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]"
+                          name="Custom_Err_Message_Column"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">"The Record Already Exists"</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">"The Record Already Exists"</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Insert Into Error Table"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[sentiment_integration_err_tbl]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].Columns[FileName_column]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="FileName_column"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[filename_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[FileName_column]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].Columns[CurrentDateTime]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="CurrentDateTime"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[error_datetime_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[CurrentDateTime]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].Columns[Column 0]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 0"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[sentiment_datetime_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].Columns[Column 1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 1"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[positive_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 1]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].Columns[Column 2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 2"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[negative_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 2]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].Columns[Column 3]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 3"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[neutral_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 3]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].Columns[Column 4]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="Column 4"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[flg_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 4]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].Columns[Custom_Err_Message_Column_str]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1500"
+                          cachedName="Custom_Err_Message_Column_str"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[err_msg_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column_str]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[ID_fld]"
+                          dataType="i4"
+                          name="ID_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[filename_fld]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="filename_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[error_datetime_fld]"
+                          dataType="dbTimeStamp"
+                          name="error_datetime_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[sentiment_datetime_fld]"
+                          dataType="dbTimeStamp"
+                          name="sentiment_datetime_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[positive_fld]"
+                          dataType="numeric"
+                          name="positive_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[negative_fld]"
+                          dataType="numeric"
+                          name="negative_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[neutral_fld]"
+                          dataType="numeric"
+                          name="neutral_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[flg_fld]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="flg_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input].ExternalColumns[err_msg_fld]"
+                          codePage="1252"
+                          dataType="text"
+                          name="err_msg_fld" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Insert into error table when Error Occurs"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[sentiment_integration_err_tbl]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].Columns[FileName_column]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="FileName_column"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[filename_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[FileName_column]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].Columns[CurrentDateTime]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="CurrentDateTime"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[error_datetime_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[CurrentDateTime]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].Columns[Custom_Err_Message_Column_str]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1500"
+                          cachedName="Custom_Err_Message_Column_str"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[err_msg_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column_str]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[ID_fld]"
+                          dataType="i4"
+                          name="ID_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[filename_fld]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="filename_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[error_datetime_fld]"
+                          dataType="dbTimeStamp"
+                          name="error_datetime_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[sentiment_datetime_fld]"
+                          dataType="dbTimeStamp"
+                          name="sentiment_datetime_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[positive_fld]"
+                          dataType="numeric"
+                          name="positive_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[negative_fld]"
+                          dataType="numeric"
+                          name="negative_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[neutral_fld]"
+                          dataType="numeric"
+                          name="neutral_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[flg_fld]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="flg_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input].ExternalColumns[err_msg_fld]"
+                          codePage="1252"
+                          dataType="text"
+                          name="err_msg_fld" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Insert into error table when value is not I or U"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[sentiment_integration_err_tbl]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].Columns[FileName_column]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="FileName_column"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[filename_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output].Columns[FileName_column]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].Columns[CurrentDateTime]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="CurrentDateTime"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[error_datetime_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output].Columns[CurrentDateTime]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].Columns[Column 0]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 0"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[sentiment_datetime_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].Columns[Column 1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 1"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[positive_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 1]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].Columns[Column 2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 2"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[negative_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 2]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].Columns[Column 3]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 3"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[neutral_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 3]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].Columns[Column 4]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="Column 4"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[flg_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 4]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].Columns[Custom_Err_Message_Column]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Custom_Err_Message_Column"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[err_msg_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[ID_fld]"
+                          dataType="i4"
+                          name="ID_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[filename_fld]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="filename_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[error_datetime_fld]"
+                          dataType="dbTimeStamp"
+                          name="error_datetime_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[sentiment_datetime_fld]"
+                          dataType="dbTimeStamp"
+                          name="sentiment_datetime_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[positive_fld]"
+                          dataType="numeric"
+                          name="positive_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[negative_fld]"
+                          dataType="numeric"
+                          name="negative_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[neutral_fld]"
+                          dataType="numeric"
+                          name="neutral_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[flg_fld]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="flg_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input].ExternalColumns[err_msg_fld]"
+                          codePage="1252"
+                          dataType="text"
+                          name="err_msg_fld" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Insert Table Sentiment"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[customers_sentiments_tbl]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].Columns[Column 0]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 0"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[sentiment_datetime_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].Columns[Column 1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 1"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[positive_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 1]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].Columns[Column 2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 2"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[negative_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 2]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].Columns[Column 3]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 3"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[neutral_fld]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 3]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                          dataType="i4"
+                          name="ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[sentiment_datetime_fld]"
+                          dataType="dbTimeStamp"
+                          name="sentiment_datetime_fld" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[positive_fld]"
+                          dataType="numeric"
+                          name="positive_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[negative_fld]"
+                          dataType="numeric"
+                          name="negative_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[neutral_fld]"
+                          dataType="numeric"
+                          name="neutral_fld"
+                          precision="10"
+                          scale="2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input].ExternalColumns[flg_fld]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="flg_fld" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Messgae Column To String From Wide String"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Inputs[Derived Column Input].Columns[Custom_Err_Message_Column]"
+                          cachedDataType="wstr"
+                          cachedLength="828"
+                          cachedName="Custom_Err_Message_Column"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column_str]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="1500"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column_str]"
+                          name="Custom_Err_Message_Column_str"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,1500,1252)#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,1500,1252)Custom_Err_Message_Column</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Messgae Column To String From Wide String 1"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Inputs[Derived Column Input].Columns[Custom_Err_Message_Column]"
+                          cachedDataType="wstr"
+                          cachedLength="25"
+                          cachedName="Custom_Err_Message_Column"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column_str]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="1500"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column_str]"
+                          name="Custom_Err_Message_Column_str"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">(DT_STR,1500,1252)#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output].Columns[Custom_Err_Message_Column]}</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">(DT_STR,1500,1252)Custom_Err_Message_Column</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table"
+                  componentClassID="Microsoft.OLEDBCommand"
+                  contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+                  name="Update Sentiment Table"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">Update sentiment_integration_err_tbl
+set positive_fld = ?,
+ negative_fld = ?,
+neutral_fld = ?
+where sentiment_datetime_fld =?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestDB.sa]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input]"
+                      errorOrTruncationOperation="Command Execution"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Command Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 1"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 1]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 2"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 2]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 3]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 3"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 3]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 0]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 0"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                          dataType="numeric"
+                          name="Param_0"
+                          precision="10"
+                          scale="2">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                          dataType="numeric"
+                          name="Param_1"
+                          precision="10"
+                          scale="2">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                          dataType="numeric"
+                          name="Param_2"
+                          precision="10"
+                          scale="2">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">81</property>
+                          </properties>
+                        </externalMetadataColumn>
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                          dataType="dbTimeStamp"
+                          name="Param_3">
+                          <properties>
+                            <property
+                              dataType="System.Int32"
+                              description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                              name="DBParamInfoFlags">65</property>
+                          </properties>
+                        </externalMetadataColumn>
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Outputs[OLE DB Command Output]"
+                      exclusionGroup="1"
+                      name="OLE DB Command Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Outputs[OLE DB Command Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Command Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Case Insert]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Case Insert"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Case Insert]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Case Update]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table.Inputs[OLE DB Command Input]"
+                  name="Case Update"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Case Update]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Conditional Split Default Output]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Inputs[Derived Column Input]"
+                  name="Conditional Split Default Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Outputs[Conditional Split Default Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Data Conversion Output]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Inputs[Lookup Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output1]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Inputs[Derived Column Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output2]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output3]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Inputs[Derived Column Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output4]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Flat File Source Error Output]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Inputs[Derived Column Input]"
+                  name="Flat File Source Error Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Error Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split.Inputs[Conditional Split Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Lookup Match Output]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Inputs[Derived Column Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup Match Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Lookup No Match Output]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment.Inputs[OLE DB Destination Input]"
+                  name="Lookup No Match Output"
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup No Match Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Move File From Source Folder To In Process"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Move File From Source Folder To In Process"
+          DTS:DTSID="{E022BB9A-0320-4D38-B6F8-E39B37E51B5B}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Move File From Source Folder To In Process"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="MoveFile"
+              TaskSourcePath="User::varInFilePathFromSource"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::varInProcFolder"
+              TaskIsDestinationVariable="True" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{8FB1011B-F0AE-4108-8336-E8CC1D88EDCE}"
+          DTS:From="Package\Foreach Loop Container\Move File From Source Folder To In Process"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Foreach Loop Container\Ingest The CSV File - Flow" />
+      </DTS:PrecedenceConstraints>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{BB91B78F-7CC5-40EF-A97D-219CB6F56635}"
+          DTS:ObjectName="{BB91B78F-7CC5-40EF-A97D-219CB6F56635}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::varInCSVFileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="163,54"
+          Id="Package\Foreach Loop Container\Move File From Source Folder To In Process"
+          TopLeft="62,26" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow"
+          TopLeft="62,177" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          TopLeft="141.5,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,97"
+              Start="0,0"
+              End="0,89.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,89.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="435,274"
+          Size="435,317"
+          Id="Package\Foreach Loop Container"
+          TopLeft="463,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Ingest The CSV File - Flow">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source"
+          TopLeft="269,68" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Conditional Split"
+          TopLeft="148,147" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Flat File Source Output]"
+          TopLeft="322.333333333333,110">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-94.8333333333333,37"
+              Start="0,0"
+              End="-94.8333333333333,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.0253807106599" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.0253807106599"
+                    Point2="0,15.0253807106599"
+                    Point3="-4,15.0253807106599" />
+                  <mssgle:LineSegment
+                    End="-90.8333333333333,15.0253807106599" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-90.8333333333333,15.0253807106599"
+                    Point2="-94.8333333333333,15.0253807106599"
+                    Point3="-94.8333333333333,19.0253807106599" />
+                  <mssgle:LineSegment
+                    End="-94.8333333333333,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment"
+          TopLeft="688,483" />
+        <NodeLayout
+          Size="297,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U"
+          TopLeft="897,211" />
+        <NodeLayout
+          Size="275,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs"
+          TopLeft="905,122" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Update Sentiment Table"
+          TopLeft="972,374" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Case Update]"
+          TopLeft="252.666666666667,189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="817.833333333333,185"
+              Start="0,0"
+              End="817.833333333333,177.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.1058530510585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,71.1058530510585"
+                    Point2="0,75.1058530510585"
+                    Point3="4,75.1058530510585" />
+                  <mssgle:LineSegment
+                    End="813.833333333333,75.1058530510585" />
+                  <mssgle:CubicBezierSegment
+                    Point1="813.833333333333,75.1058530510585"
+                    Point2="817.833333333333,75.1058530510585"
+                    Point3="817.833333333333,79.1058530510585" />
+                  <mssgle:LineSegment
+                    End="817.833333333333,177.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="380.417799479167,80.1058530510585,56.997734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="226,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time"
+          TopLeft="561,167" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Conditional Split Default Output]"
+          TopLeft="307,168">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="254,20"
+              Start="0,0"
+              End="246.5,20">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="123,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="123,0"
+                    Point2="127,0"
+                    Point3="127,4" />
+                  <mssgle:LineSegment
+                    End="127,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="127,16"
+                    Point2="127,20"
+                    Point3="131,20" />
+                  <mssgle:LineSegment
+                    End="246.5,20" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="56.38609375,-17.658203125,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output]"
+          TopLeft="787,188">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="110,44"
+              Start="0,0"
+              End="102.5,44">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51,0"
+                    Point2="55,0"
+                    Point3="55,4" />
+                  <mssgle:LineSegment
+                    End="55,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55,40"
+                    Point2="55,44"
+                    Point3="59,44" />
+                  <mssgle:LineSegment
+                    End="102.5,44" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="226,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1"
+          TopLeft="574,57" />
+        <NodeLayout
+          Size="300,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String"
+          TopLeft="869,53" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output1]"
+          TopLeft="800,76">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69,0"
+              Start="0,0"
+              End="61.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="61.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Flat File Source Error Output]"
+          TopLeft="425,89">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="149,-11"
+              Start="0,0"
+              End="141.5,-11">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="70.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="70.5,0"
+                    Point2="74.5,0"
+                    Point3="74.5,-4" />
+                  <mssgle:LineSegment
+                    End="74.5,-7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="74.5,-7"
+                    Point2="74.5,-11"
+                    Point3="78.5,-11" />
+                  <mssgle:LineSegment
+                    End="141.5,-11" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="10.87361328125,1,127.2527734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output2]"
+          TopLeft="1019,95">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.5,27"
+              Start="0,0"
+              End="23.5,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.5"
+                    Point2="0,13.5"
+                    Point3="4,13.5" />
+                  <mssgle:LineSegment
+                    End="19.5,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.5,13.5"
+                    Point2="23.5,13.5"
+                    Point3="23.5,17.5" />
+                  <mssgle:LineSegment
+                    End="23.5,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="223,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists"
+          TopLeft="383,286" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion"
+          TopLeft="62,288" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Case Insert]"
+          TopLeft="202.333333333333,189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.8333333333333,99"
+              Start="0,0"
+              End="-59.8333333333333,91.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.1917808219178" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.1917808219178"
+                    Point2="0,40.1917808219178"
+                    Point3="-4,40.1917808219178" />
+                  <mssgle:LineSegment
+                    End="-55.8333333333333,40.1917808219178" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-55.8333333333333,40.1917808219178"
+                    Point2="-59.8333333333333,40.1917808219178"
+                    Point3="-59.8333333333333,44.1917808219178" />
+                  <mssgle:LineSegment
+                    End="-59.8333333333333,91.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.7905729166667,45.1917808219178,51.7478125,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Data Conversion Output]"
+          TopLeft="223,308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="160,0"
+              Start="0,0"
+              End="152.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="152.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Lookup No Match Output]"
+          TopLeft="530.333333333333,328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="252.666666666667,155"
+              Start="0,0"
+              End="252.666666666667,147.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.6625111308994" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,58.6625111308994"
+                    Point2="0,62.6625111308994"
+                    Point3="4,62.6625111308994" />
+                  <mssgle:LineSegment
+                    End="248.666666666667,62.6625111308994" />
+                  <mssgle:CubicBezierSegment
+                    Point1="248.666666666667,62.6625111308994"
+                    Point2="252.666666666667,62.6625111308994"
+                    Point3="252.666666666667,66.6625111308994" />
+                  <mssgle:LineSegment
+                    End="252.666666666667,147.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="70.5269466145834,67.6625111308994,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2"
+          TopLeft="232,388" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Lookup Match Output]"
+          TopLeft="458.666666666667,328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-109.166666666667,60"
+              Start="0,0"
+              End="-109.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2564559216385" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2564559216385"
+                    Point2="0,24.2564559216385"
+                    Point3="-4,24.2564559216385" />
+                  <mssgle:LineSegment
+                    End="-105.166666666667,24.2564559216385" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-105.166666666667,24.2564559216385"
+                    Point2="-109.166666666667,24.2564559216385"
+                    Point3="-109.166666666667,28.2564559216385" />
+                  <mssgle:LineSegment
+                    End="-109.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-102.774720052083,29.2564559216385,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table"
+          TopLeft="393,517" />
+        <NodeLayout
+          Size="309,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1"
+          TopLeft="69,475" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output3]"
+          TopLeft="349.5,430">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-126,45"
+              Start="0,0"
+              End="-126,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="-4,22.5" />
+                  <mssgle:LineSegment
+                    End="-122,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-122,22.5"
+                    Point2="-126,22.5"
+                    Point3="-126,26.5" />
+                  <mssgle:LineSegment
+                    End="-126,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output4]"
+          TopLeft="378,494.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108,22.5"
+              Start="0,0"
+              End="108,15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="104,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104,0"
+                    Point2="108,0"
+                    Point3="108,4" />
+                  <mssgle:LineSegment
+                    End="108,15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Sentiment">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when value is not I or U">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert into error table when Error Occurs">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[customers_sentiments_tbl]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Into Error Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
