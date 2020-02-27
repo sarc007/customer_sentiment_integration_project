@@ -1,0 +1,1 @@
+﻿truncate table customers_sentiments_tbl
