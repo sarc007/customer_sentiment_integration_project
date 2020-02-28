@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="54"
-  DTS:VersionGUID="{397630A6-3F13-470E-A24C-044D43676DB6}">
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{F139CC57-0CB9-4E75-AF4B-47897FEA1AED}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -93,7 +93,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFamn+VX9m0uu/ir2KG+8wgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADmMfgQRLGuULg9zC+ZVylUSgbf5FacON2G4tgliXQk8wAAAAAOgAAAAAIAACAAAABW8ggvjU2c0Glu6SuQqUV+QhF/VQXaqWmehO8VSNzl0CAAAACJKeIz6yWxRCQDzV0sroowc4gWubpto0AdfEtSQSv950AAAABIj9fUebd8dKwA7zP1a4NvUdCl+abquTzWZqrc+p2r7Nk7k3L3dtCSzBZMAwATz6hhsktu4wP+OGzdVlIVpUAD</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFamn+VX9m0uu/ir2KG+8wgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACWCH9Dm9P0Qpo39snMzb2W2WepX+ijkgTBjRYZU5+/2gAAAAAOgAAAAAIAACAAAACq9mUpbctK79Aii/QCHkHH7+36/GmvAHwekym9pEIlzCAAAABcng3P1tm5GFkYST4cUbHIHb9J8rzvaDt8409+S+7uQ0AAAAC8CAGOGZU81NCuUwl6oyp0Zz48I5RdeG3quC0/H0STDDkNQ8cjddApgUpeeJmzWeFFzOKXvb5n06HyCf9mCF+t</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -110,7 +110,7 @@
           <DTS:Password
             DTS:Name="password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFamn+VX9m0uu/ir2KG+8wgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC8QlJgAyfIucyjgySp6MUC/OjUpydqYHCnDlPQ48Sx8QAAAAAOgAAAAAIAACAAAAA0ObcBJdVlm8FoZi+XxKKagLnYFQmo8QuGLOmfjuOu5CAAAACtxTm0XX1LcwcrIHEQr3rz+JiNUYG41nHRlI1nkIYrrEAAAABeSeLhGRyAAcpOzMqZ6BM1U75P0ig2ggkhFbdwx9j+i//SQABoKf5VE9Jawfv3lhXoBvjwPmGNYzX9DgcPHwi/</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFamn+VX9m0uu/ir2KG+8wgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACE3KjeVCAOyGx1FEwoB5RqUhKO5vuPWDfJwgeDeyntogAAAAAOgAAAAAIAACAAAABnvpG+5FvRyKywYYlMTFxpMP3VxZ0IiY6PiR01+PiNFyAAAAAdl6un3IY87ELzSpDTuE5oeuaEpwJUad+zl7P8y4r7TkAAAACIwpMpBmPkpU6Gd3KdSy1oMjNlB/WlisjM1BqWcLp4pORbE8wb+zQZZwTRNCJiKL4zY5T+A0n5Fk7C9B27AJdf</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -8925,12 +8925,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]"
                           name="Column 0"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -8947,12 +8947,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 1]"
                           name="Column 1"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -8969,12 +8969,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 2]"
                           name="Column 2"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -8991,12 +8991,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 3]"
                           name="Column 3"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -9013,12 +9013,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           codePage="1252"
                           dataType="str"
                           errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
+                          errorRowDisposition="RedirectRow"
                           externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
                           length="50"
                           lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 4]"
                           name="Column 4"
-                          truncationRowDisposition="FailComponent">
+                          truncationRowDisposition="RedirectRow">
                           <properties>
                             <property
                               dataType="System.Boolean"
@@ -9496,12 +9496,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1 1 1.Inputs[Derived Column Input].Columns[ErrorCode]"
                           cachedDataType="i4"
                           cachedName="ErrorCode"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]" />
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1 1 1.Inputs[Derived Column Input].Columns[ErrorColumn]"
                           cachedDataType="i4"
                           cachedName="ErrorColumn"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]" />
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -9574,7 +9574,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                               containsID="true"
                               dataType="System.String"
                               description="Derived Column Expression"
-                              name="Expression">"Error Column : " + (DT_STR,500,1252)#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]} + "Error Code : " + (DT_STR,300,1252)#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]} + "   Data Insertion Error"</property>
+                              name="Expression">"Error Column : " + (DT_STR,500,1252)#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]} + "Error Code : " + (DT_STR,300,1252)#{Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]} + "   Data Insertion Error"</property>
                             <property
                               containsID="true"
                               dataType="System.String"
@@ -9864,11 +9864,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table"
+                  refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table"
                   componentClassID="Microsoft.OLEDBCommand"
                   contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
                   description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-                  name="Insert In  Customer Sentiment Table"
+                  name="Insert In Customer Sentiment Table"
                   usesDispositions="true"
                   version="2">
                   <properties>
@@ -9891,7 +9891,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Connections[OleDbConnection]"
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Connections[OleDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[LocalHost.TestDB.sa]"
                       connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestDB.sa]"
                       description="The OLE DB runtime connection used to access the database."
@@ -9899,57 +9899,52 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input]"
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input]"
                       errorOrTruncationOperation="Command Execution"
                       errorRowDisposition="RedirectRow"
                       hasSideEffects="true"
                       name="OLE DB Command Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 4]"
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 4]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Column 4"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                           lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 4]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 0]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Column 0"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 0]" />
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column_Date]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="Column_Date"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Column_Date]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 1]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Column 1"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 1]" />
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column1Numeric]"
+                          cachedDataType="numeric"
+                          cachedName="Column1Numeric"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Column1Numeric]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 2]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Column 2"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 2]" />
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column2Numeric]"
+                          cachedDataType="numeric"
+                          cachedName="Column2Numeric"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Column2Numeric]" />
                         <inputColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column 3]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="Column 3"
-                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Flat File Source.Outputs[Flat File Source Output].Columns[Column 3]" />
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].Columns[Column3Numeric]"
+                          cachedDataType="numeric"
+                          cachedName="Column3Numeric"
+                          cachedPrecision="18"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Conversion.Outputs[Data Conversion Output].Columns[Column3Numeric]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                           dataType="dbTimeStamp"
                           name="Param_0">
                           <properties>
@@ -9960,11 +9955,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                           dataType="numeric"
                           name="Param_1"
-                          precision="10"
-                          scale="2">
+                          precision="18"
+                          scale="6">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -9973,11 +9968,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                           dataType="numeric"
                           name="Param_2"
-                          precision="10"
-                          scale="2">
+                          precision="18"
+                          scale="6">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -9986,11 +9981,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                           dataType="numeric"
                           name="Param_3"
-                          precision="10"
-                          scale="2">
+                          precision="18"
+                          scale="6">
                           <properties>
                             <property
                               dataType="System.Int32"
@@ -9999,7 +9994,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           </properties>
                         </externalMetadataColumn>
                         <externalMetadataColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                           codePage="1252"
                           dataType="str"
                           length="1"
@@ -10016,29 +10011,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Output]"
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Output]"
                       exclusionGroup="1"
                       name="OLE DB Command Output"
-                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input]">
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input]">
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output]"
+                      refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="OLE DB Command Error Output"
-                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input]">
+                      synchronousInputId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                          refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -11436,12 +11431,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Error.Inputs[Input 0].Columns[ErrorCode]"
                           cachedDataType="i4"
                           cachedName="ErrorCode"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]" />
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorCode]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Error.Inputs[Input 0].Columns[ErrorColumn]"
                           cachedDataType="i4"
                           cachedName="ErrorColumn"
-                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]" />
+                          lineageId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]" />
                         <inputColumn
                           refId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Error.Inputs[Input 0].Columns[Column1Numeric]"
                           cachedDataType="numeric"
@@ -14381,29 +14376,29 @@ where sentiment_datetime_fld =?</property>
                   startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Convert To Integer 1.Outputs[Data Conversion Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output10]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Already Exists Error.Inputs[Input 0]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data conversion Error 1.Inputs[Input 0]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2 2.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output9]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Inputs[Derived Column Input]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Convert To Integer 1.Inputs[Data Conversion Input]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output8]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2.Inputs[Derived Column Input]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Error In CSV File Script Write To Err DB.Inputs[Input 0]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1 1.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output7]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Inputs[Derived Column Input]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2 2.Inputs[Derived Column Input]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1 1 2.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output6]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2 1.Inputs[Derived Column Input]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Error.Inputs[Input 0]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1 1 1.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2 1.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output5]"
                   endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data conversion Error.Inputs[Input 0]"
@@ -14411,29 +14406,29 @@ where sentiment_datetime_fld =?</property>
                   startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output4]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert Table Error.Inputs[Input 0]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2 1.Inputs[Derived Column Input]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2 1.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1 1 1.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output3]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2 2.Inputs[Derived Column Input]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Inputs[Derived Column Input]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1 1 2.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output2]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Error In CSV File Script Write To Err DB.Inputs[Input 0]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2.Inputs[Derived Column Input]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1 1.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output1]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Convert To Integer 1.Inputs[Data Conversion Input]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Inputs[Derived Column Input]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 2.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data conversion Error 1.Inputs[Input 0]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Data Already Exists Error.Inputs[Input 0]"
                   name="Derived Column Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 2 2.Outputs[Derived Column Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Messgae Column To String From Wide String 1.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Flat File Source Error Output]"
                   endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1.Inputs[Derived Column Input]"
@@ -14451,7 +14446,7 @@ where sentiment_datetime_fld =?</property>
                   startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup Match Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Lookup No Match Output]"
-                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Inputs[OLE DB Command Input]"
+                  endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Inputs[OLE DB Command Input]"
                   name="Lookup No Match Output"
                   startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Check if record already exists.Outputs[Lookup No Match Output]" />
                 <path
@@ -14463,7 +14458,7 @@ where sentiment_datetime_fld =?</property>
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[OLE DB Command Error Output1]"
                   endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1 1 1.Inputs[Derived Column Input]"
                   name="OLE DB Command Error Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Error Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Error Output]" />
                 <path
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[OLE DB Command Output]"
                   endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Success Full Update.Inputs[Input 0]"
@@ -14473,7 +14468,7 @@ where sentiment_datetime_fld =?</property>
                   refId="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[OLE DB Command Output1]"
                   endId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Success Full Update 1.Inputs[Input 0]"
                   name="OLE DB Command Output"
-                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table.Outputs[OLE DB Command Output]" />
+                  startId="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table.Outputs[OLE DB Command Output]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -14851,8 +14846,8 @@ where sentiment_datetime_fld =?</property>
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Get File Name And Date Time 1"
           TopLeft="220.285714285714,61.2857142857143" />
         <NodeLayout
-          Size="255,42"
-          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In  Customer Sentiment Table"
+          Size="252,42"
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow\Insert In Customer Sentiment Table"
           TopLeft="402,471" />
         <NodeLayout
           Size="192,42"
@@ -14904,30 +14899,30 @@ where sentiment_datetime_fld =?</property>
           TopLeft="902.428571428571,370.285714285714" />
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[OLE DB Command Output1]"
-          TopLeft="488.333333333333,513">
+          TopLeft="487.333333333333,513">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-70.8333333333333,252"
+              EndConnector="-69.8333333333333,252"
               Start="0,0"
-              End="-70.8333333333333,244.5">
+              End="-69.8333333333333,244.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,97.742790335152" />
+                    End="0,97.7539432176656" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,97.742790335152"
-                    Point2="0,101.742790335152"
-                    Point3="-4,101.742790335152" />
+                    Point1="0,97.7539432176656"
+                    Point2="0,101.753943217666"
+                    Point3="-4,101.753943217666" />
                   <mssgle:LineSegment
-                    End="-66.8333333333333,101.742790335152" />
+                    End="-65.8333333333333,101.753943217666" />
                   <mssgle:CubicBezierSegment
-                    Point1="-66.8333333333333,101.742790335152"
-                    Point2="-70.8333333333333,101.742790335152"
-                    Point3="-70.8333333333333,105.742790335152" />
+                    Point1="-65.8333333333333,101.753943217666"
+                    Point2="-69.8333333333333,101.753943217666"
+                    Point3="-69.8333333333333,105.753943217666" />
                   <mssgle:LineSegment
-                    End="-70.8333333333333,244.5" />
+                    End="-69.8333333333333,244.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14972,25 +14967,37 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[OLE DB Command Error Output1]"
-          TopLeft="574.297619047619,513">
+          TopLeft="568.666666666667,513">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,151.142857142857"
+              EndConnector="9.26190476190436,151.142857142857"
               Start="0,0"
-              End="0,143.642857142857">
+              End="9.26190476190436,143.642857142857">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,143.642857142857" />
+                    End="0,57.0292924740874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,57.0292924740874"
+                    Point2="0,61.0292924740874"
+                    Point3="4,61.0292924740874" />
+                  <mssgle:LineSegment
+                    End="5.26190476190436,61.0292924740874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.26190476190436,61.0292924740874"
+                    Point2="9.26190476190436,61.0292924740874"
+                    Point3="9.26190476190436,65.0292924740874" />
+                  <mssgle:LineSegment
+                    End="9.26190476190436,143.642857142857" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-70.70890625,66.0167410714285,141.4178125,11.609375"
+              BoundingBox="-66.0779538690478,66.0292924740874,141.4178125,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15036,9 +15043,9 @@ where sentiment_datetime_fld =?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="239,147.571428571429"
+              EndConnector="237.5,147.571428571429"
               Start="0,0"
-              End="239,140.071428571429">
+              End="237.5,140.071428571429">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -15049,20 +15056,20 @@ where sentiment_datetime_fld =?</property>
                     Point2="0,73.7857142857145"
                     Point3="4,73.7857142857145" />
                   <mssgle:LineSegment
-                    End="235,73.7857142857145" />
+                    End="233.5,73.7857142857145" />
                   <mssgle:CubicBezierSegment
-                    Point1="235,73.7857142857145"
-                    Point2="239,73.7857142857145"
-                    Point3="239,77.7857142857145" />
+                    Point1="233.5,73.7857142857145"
+                    Point2="237.5,73.7857142857145"
+                    Point3="237.5,77.7857142857145" />
                   <mssgle:LineSegment
-                    End="239,140.071428571429" />
+                    End="237.5,140.071428571429" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="63.69361328125,78.7857142857145,111.6127734375,11.609375"
+              BoundingBox="62.94361328125,78.7857142857145,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15103,101 +15110,31 @@ where sentiment_datetime_fld =?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Flat File Source Output]"
-          TopLeft="256.428571428571,183">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="253.571428571429,42.428571428571"
-              Start="0,0"
-              End="246.071428571429,42.428571428571">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="122.785714285715,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="122.785714285715,0"
-                    Point2="126.785714285715,0"
-                    Point3="126.785714285715,4" />
-                  <mssgle:LineSegment
-                    End="126.785714285715,38.428571428571" />
-                  <mssgle:CubicBezierSegment
-                    Point1="126.785714285715,38.428571428571"
-                    Point2="126.785714285715,42.428571428571"
-                    Point3="130.785714285715,42.428571428571" />
-                  <mssgle:LineSegment
-                    End="246.071428571429,42.428571428571" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Flat File Source Error Output]"
-          TopLeft="178.428571428571,162">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="159.357142857143,-58.7142857142857"
-              Start="0,0"
-              End="159.357142857143,-51.2142857142857">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-25.3571428571429" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-25.3571428571429"
-                    Point2="0,-29.3571428571429"
-                    Point3="4,-29.3571428571429" />
-                  <mssgle:LineSegment
-                    End="155.357142857143,-29.3571428571429" />
-                  <mssgle:CubicBezierSegment
-                    Point1="155.357142857143,-29.3571428571429"
-                    Point2="159.357142857143,-29.3571428571429"
-                    Point3="159.357142857143,-33.3571428571429" />
-                  <mssgle:LineSegment
-                    End="159.357142857143,-51.2142857142857" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="16.0521847098215,-24.3571428571429,127.2527734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output10]"
-          TopLeft="161.071428571429,647.285714285714">
+          TopLeft="1350,381.285714285715">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="55.6428571428574,139.857142857143"
+              EndConnector="269.857142857143,29.9999999999996"
               Start="0,0"
-              End="55.6428571428574,132.357142857143">
+              End="269.857142857143,22.4999999999996">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,65.9285714285714" />
+                    End="0,10.9999999999998" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,65.9285714285714"
-                    Point2="0,69.9285714285714"
-                    Point3="4,69.9285714285714" />
+                    Point1="0,10.9999999999998"
+                    Point2="0,14.9999999999998"
+                    Point3="4,14.9999999999998" />
                   <mssgle:LineSegment
-                    End="51.6428571428574,69.9285714285714" />
+                    End="265.857142857143,14.9999999999998" />
                   <mssgle:CubicBezierSegment
-                    Point1="51.6428571428574,69.9285714285714"
-                    Point2="55.6428571428574,69.9285714285714"
-                    Point3="55.6428571428574,73.9285714285714" />
+                    Point1="265.857142857143,14.9999999999998"
+                    Point2="269.857142857143,14.9999999999998"
+                    Point3="269.857142857143,18.9999999999998" />
                   <mssgle:LineSegment
-                    End="55.6428571428574,132.357142857143" />
+                    End="269.857142857143,22.4999999999996" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15208,30 +15145,30 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output9]"
-          TopLeft="177.642857142857,475.142857142857">
+          TopLeft="743,126.428571428571">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-16.5714285714286,130.142857142857"
+              EndConnector="441.285714285714,14.5714285714289"
               Start="0,0"
-              End="-16.5714285714286,122.642857142857">
+              End="433.785714285714,14.5714285714289">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,61.0714285714287" />
+                    End="216.642857142857,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,61.0714285714287"
-                    Point2="0,65.0714285714287"
-                    Point3="-4,65.0714285714287" />
+                    Point1="216.642857142857,0"
+                    Point2="220.642857142857,0"
+                    Point3="220.642857142857,4" />
                   <mssgle:LineSegment
-                    End="-12.5714285714286,65.0714285714287" />
+                    End="220.642857142857,10.5714285714289" />
                   <mssgle:CubicBezierSegment
-                    Point1="-12.5714285714286,65.0714285714287"
-                    Point2="-16.5714285714286,65.0714285714287"
-                    Point3="-16.5714285714286,69.0714285714287" />
+                    Point1="220.642857142857,10.5714285714289"
+                    Point2="220.642857142857,14.5714285714289"
+                    Point3="224.642857142857,14.5714285714289" />
                   <mssgle:LineSegment
-                    End="-16.5714285714286,122.642857142857" />
+                    End="433.785714285714,14.5714285714289" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15242,30 +15179,30 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output8]"
-          TopLeft="858.928571428571,550.714285714286">
+          TopLeft="862,35.4285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-92.714285714285,65.857142857143"
+              EndConnector="429.21428571429,35.3571428571429"
               Start="0,0"
-              End="-92.714285714285,58.357142857143">
+              End="421.71428571429,35.3571428571429">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.9285714285715" />
+                    End="210.607142857145,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,28.9285714285715"
-                    Point2="0,32.9285714285715"
-                    Point3="-4,32.9285714285715" />
+                    Point1="210.607142857145,0"
+                    Point2="214.607142857145,0"
+                    Point3="214.607142857145,4" />
                   <mssgle:LineSegment
-                    End="-88.714285714285,32.9285714285715" />
+                    End="214.607142857145,31.3571428571429" />
                   <mssgle:CubicBezierSegment
-                    Point1="-88.714285714285,32.9285714285715"
-                    Point2="-92.714285714285,32.9285714285715"
-                    Point3="-92.714285714285,36.9285714285715" />
+                    Point1="214.607142857145,31.3571428571429"
+                    Point2="214.607142857145,35.3571428571429"
+                    Point3="218.607142857145,35.3571428571429" />
                   <mssgle:LineSegment
-                    End="-92.714285714285,58.357142857143" />
+                    End="421.71428571429,35.3571428571429" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15276,30 +15213,30 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output7]"
-          TopLeft="455.285714285714,82.2857142857143">
+          TopLeft="1218.64285714286,304.857142857143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="106.714285714286,-46.8571428571428"
+              EndConnector="131.357142857144,34.4285714285716"
               Start="0,0"
-              End="99.2142857142857,-46.8571428571428">
+              End="131.357142857144,26.9285714285716">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="49.3571428571428,0" />
+                    End="0,13.2142857142858" />
                   <mssgle:CubicBezierSegment
-                    Point1="49.3571428571428,0"
-                    Point2="53.3571428571428,0"
-                    Point3="53.3571428571428,-4" />
+                    Point1="0,13.2142857142858"
+                    Point2="0,17.2142857142858"
+                    Point3="4,17.2142857142858" />
                   <mssgle:LineSegment
-                    End="53.3571428571428,-42.8571428571428" />
+                    End="127.357142857144,17.2142857142858" />
                   <mssgle:CubicBezierSegment
-                    Point1="53.3571428571428,-42.8571428571428"
-                    Point2="53.3571428571428,-46.8571428571428"
-                    Point3="57.3571428571428,-46.8571428571428" />
+                    Point1="127.357142857144,17.2142857142858"
+                    Point2="131.357142857144,17.2142857142858"
+                    Point3="131.357142857144,21.2142857142858" />
                   <mssgle:LineSegment
-                    End="99.2142857142857,-46.8571428571428" />
+                    End="131.357142857144,26.9285714285716" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15310,30 +15247,18 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output6]"
-          TopLeft="577.928571428571,706.142857142857">
+          TopLeft="858.714285714286,764.142857142858">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="130.785714285715,37.428571428572"
+              EndConnector="77.857142857144,0"
               Start="0,0"
-              End="130.785714285715,29.928571428572">
+              End="70.357142857144,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.714285714286" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.714285714286"
-                    Point2="0,18.714285714286"
-                    Point3="4,18.714285714286" />
-                  <mssgle:LineSegment
-                    End="126.785714285715,18.714285714286" />
-                  <mssgle:CubicBezierSegment
-                    Point1="126.785714285715,18.714285714286"
-                    Point2="130.785714285715,18.714285714286"
-                    Point3="130.785714285715,22.714285714286" />
-                  <mssgle:LineSegment
-                    End="130.785714285715,29.928571428572" />
+                    End="70.357142857144,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15378,18 +15303,30 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output4]"
-          TopLeft="858.714285714286,764.142857142858">
+          TopLeft="577.928571428571,706.142857142857">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="77.857142857144,0"
+              EndConnector="130.785714285715,37.428571428572"
               Start="0,0"
-              End="70.357142857144,0">
+              End="130.785714285715,29.928571428572">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="70.357142857144,0" />
+                    End="0,14.714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.714285714286"
+                    Point2="0,18.714285714286"
+                    Point3="4,18.714285714286" />
+                  <mssgle:LineSegment
+                    End="126.785714285715,18.714285714286" />
+                  <mssgle:CubicBezierSegment
+                    Point1="126.785714285715,18.714285714286"
+                    Point2="130.785714285715,18.714285714286"
+                    Point3="130.785714285715,22.714285714286" />
+                  <mssgle:LineSegment
+                    End="130.785714285715,29.928571428572" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15400,30 +15337,30 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output3]"
-          TopLeft="1218.64285714286,304.857142857143">
+          TopLeft="455.285714285714,82.2857142857143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="131.357142857144,34.4285714285716"
+              EndConnector="106.714285714286,-46.8571428571428"
               Start="0,0"
-              End="131.357142857144,26.9285714285716">
+              End="99.2142857142857,-46.8571428571428">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.2142857142858" />
+                    End="49.3571428571428,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.2142857142858"
-                    Point2="0,17.2142857142858"
-                    Point3="4,17.2142857142858" />
+                    Point1="49.3571428571428,0"
+                    Point2="53.3571428571428,0"
+                    Point3="53.3571428571428,-4" />
                   <mssgle:LineSegment
-                    End="127.357142857144,17.2142857142858" />
+                    End="53.3571428571428,-42.8571428571428" />
                   <mssgle:CubicBezierSegment
-                    Point1="127.357142857144,17.2142857142858"
-                    Point2="131.357142857144,17.2142857142858"
-                    Point3="131.357142857144,21.2142857142858" />
+                    Point1="53.3571428571428,-42.8571428571428"
+                    Point2="53.3571428571428,-46.8571428571428"
+                    Point3="57.3571428571428,-46.8571428571428" />
                   <mssgle:LineSegment
-                    End="131.357142857144,26.9285714285716" />
+                    End="99.2142857142857,-46.8571428571428" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15434,30 +15371,30 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output2]"
-          TopLeft="862,35.4285714285714">
+          TopLeft="858.928571428571,550.714285714286">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="429.21428571429,35.3571428571429"
+              EndConnector="-92.714285714285,65.857142857143"
               Start="0,0"
-              End="421.71428571429,35.3571428571429">
+              End="-92.714285714285,58.357142857143">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="210.607142857145,0" />
+                    End="0,28.9285714285715" />
                   <mssgle:CubicBezierSegment
-                    Point1="210.607142857145,0"
-                    Point2="214.607142857145,0"
-                    Point3="214.607142857145,4" />
+                    Point1="0,28.9285714285715"
+                    Point2="0,32.9285714285715"
+                    Point3="-4,32.9285714285715" />
                   <mssgle:LineSegment
-                    End="214.607142857145,31.3571428571429" />
+                    End="-88.714285714285,32.9285714285715" />
                   <mssgle:CubicBezierSegment
-                    Point1="214.607142857145,31.3571428571429"
-                    Point2="214.607142857145,35.3571428571429"
-                    Point3="218.607142857145,35.3571428571429" />
+                    Point1="-88.714285714285,32.9285714285715"
+                    Point2="-92.714285714285,32.9285714285715"
+                    Point3="-92.714285714285,36.9285714285715" />
                   <mssgle:LineSegment
-                    End="421.71428571429,35.3571428571429" />
+                    End="-92.714285714285,58.357142857143" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15468,30 +15405,30 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output1]"
-          TopLeft="743,126.428571428571">
+          TopLeft="177.642857142857,475.142857142857">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="441.285714285714,14.5714285714289"
+              EndConnector="-16.5714285714286,130.142857142857"
               Start="0,0"
-              End="433.785714285714,14.5714285714289">
+              End="-16.5714285714286,122.642857142857">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="216.642857142857,0" />
+                    End="0,61.0714285714287" />
                   <mssgle:CubicBezierSegment
-                    Point1="216.642857142857,0"
-                    Point2="220.642857142857,0"
-                    Point3="220.642857142857,4" />
+                    Point1="0,61.0714285714287"
+                    Point2="0,65.0714285714287"
+                    Point3="-4,65.0714285714287" />
                   <mssgle:LineSegment
-                    End="220.642857142857,10.5714285714289" />
+                    End="-12.5714285714286,65.0714285714287" />
                   <mssgle:CubicBezierSegment
-                    Point1="220.642857142857,10.5714285714289"
-                    Point2="220.642857142857,14.5714285714289"
-                    Point3="224.642857142857,14.5714285714289" />
+                    Point1="-12.5714285714286,65.0714285714287"
+                    Point2="-16.5714285714286,65.0714285714287"
+                    Point3="-16.5714285714286,69.0714285714287" />
                   <mssgle:LineSegment
-                    End="433.785714285714,14.5714285714289" />
+                    End="-16.5714285714286,122.642857142857" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15502,30 +15439,30 @@ where sentiment_datetime_fld =?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Derived Column Output]"
-          TopLeft="1350,381.285714285715">
+          TopLeft="161.071428571429,647.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="269.857142857143,29.9999999999996"
+              EndConnector="55.6428571428574,139.857142857143"
               Start="0,0"
-              End="269.857142857143,22.4999999999996">
+              End="55.6428571428574,132.357142857143">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10.9999999999998" />
+                    End="0,65.9285714285714" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,10.9999999999998"
-                    Point2="0,14.9999999999998"
-                    Point3="4,14.9999999999998" />
+                    Point1="0,65.9285714285714"
+                    Point2="0,69.9285714285714"
+                    Point3="4,69.9285714285714" />
                   <mssgle:LineSegment
-                    End="265.857142857143,14.9999999999998" />
+                    End="51.6428571428574,69.9285714285714" />
                   <mssgle:CubicBezierSegment
-                    Point1="265.857142857143,14.9999999999998"
-                    Point2="269.857142857143,14.9999999999998"
-                    Point3="269.857142857143,18.9999999999998" />
+                    Point1="51.6428571428574,69.9285714285714"
+                    Point2="55.6428571428574,69.9285714285714"
+                    Point3="55.6428571428574,73.9285714285714" />
                   <mssgle:LineSegment
-                    End="269.857142857143,22.4999999999996" />
+                    End="55.6428571428574,132.357142857143" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15807,6 +15744,76 @@ where sentiment_datetime_fld =?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="57.3046651785715,89.2767527675278,51.7478125,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Flat File Source Output]"
+          TopLeft="256.428571428571,183">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="253.571428571429,42.428571428571"
+              Start="0,0"
+              End="246.071428571429,42.428571428571">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="122.785714285715,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122.785714285715,0"
+                    Point2="126.785714285715,0"
+                    Point3="126.785714285715,4" />
+                  <mssgle:LineSegment
+                    End="126.785714285715,38.428571428571" />
+                  <mssgle:CubicBezierSegment
+                    Point1="126.785714285715,38.428571428571"
+                    Point2="126.785714285715,42.428571428571"
+                    Point3="130.785714285715,42.428571428571" />
+                  <mssgle:LineSegment
+                    End="246.071428571429,42.428571428571" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Ingest The CSV File - Flow.Paths[Flat File Source Error Output]"
+          TopLeft="178.428571428571,162">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="159.357142857143,-58.7142857142857"
+              Start="0,0"
+              End="159.357142857143,-51.2142857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-25.3571428571428" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-25.3571428571428"
+                    Point2="0,-29.3571428571428"
+                    Point3="4,-29.3571428571428" />
+                  <mssgle:LineSegment
+                    End="155.357142857143,-29.3571428571428" />
+                  <mssgle:CubicBezierSegment
+                    Point1="155.357142857143,-29.3571428571428"
+                    Point2="159.357142857143,-29.3571428571428"
+                    Point3="159.357142857143,-33.3571428571428" />
+                  <mssgle:LineSegment
+                    End="159.357142857143,-51.2142857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="16.0521847098215,-24.3571428571428,127.2527734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
